@@ -6,7 +6,7 @@ import { PortableText } from '@portabletext/react';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { PortableTextComponents } from '../../components/PortableTextComponents'; // Correct path
-import '../../blogstandard-page.css'
+import '../../styles/blogstandard-page.css'
 export default function BlogPostPage() {
   const [post, setPost] = useState(null);
   const searchParams = useSearchParams();

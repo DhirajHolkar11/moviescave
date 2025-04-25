@@ -1,4 +1,4 @@
-import '../../styles/portable-text-components.css'
+import '../styles/portable-text-components.css'
 
 
 export const PortableTextComponents = {
