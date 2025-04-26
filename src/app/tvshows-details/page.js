@@ -1,43 +1,129 @@
+// 'use client';
+// import React, { useEffect, useState } from 'react';
+// import { client } from '../../../sanity';
+// import { useSearchParams } from 'next/navigation';
+// import '../../styles/tvshows-details.css';
+
+// const TvshowsDetailsPage = () => {
+//   const searchParams = useSearchParams();
+//   const slug = searchParams.get('slug');
+
+//   const [tvshow, setTvshow] = useState(null);
+
+//   useEffect(() => {
+//     const fetchTvshow = async () => {
+//       try {
+//         const query = `*[_type == "tvshowsDetails" && slug.current == $slug][0]{
+//           title,
+//           year,
+//           country,
+//           revenue,
+//           director,
+//           studio,
+//           genre,
+//           "imageUrl": image.asset->url,
+//           description
+//         }`;
+//         const data = await client.fetch(query, { slug });
+//         setTvshow(data);
+//       } catch (error) {
+//         console.error('Error fetching tvshow details:', error);
+//       }
+//     };
+
+//     if (slug) {
+//       fetchTvshow();
+//     }
+//   }, [slug]);
+
+//   if (!tvshow) {
+//     return <div className="loading">Loading tvshow details...</div>;
+//   }
+
+//   return (
+//     <div className="tvshow-details-container">
+//       <div className="tvshow-details-row">
+//         <div className="tvshow-image">
+//           <img src={tvshow.imageUrl} alt={tvshow.title} />
+//         </div>
+//         <div className="tvshow-info">
+//           <h1>{tvshow.title}</h1>
+//           <p><strong>Year:</strong> {tvshow.year}</p>
+//           <p><strong>Studio:</strong> {tvshow.studio}</p>
+//           <p><strong>Revenue:</strong> ${tvshow.revenue?.toLocaleString()}</p>
+//           <p><strong>Country:</strong> {tvshow.country}</p>
+//           <p><strong>Director:</strong> {tvshow.director}</p>
+//           <p><strong>Genre:</strong> {tvshow.genre?.join(', ')}</p>
+//         </div>
+//       </div>
+//       <div className="tvshow-description">
+//         <h2>Description</h2>
+//         <p>{tvshow.description}</p>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default TvshowsDetailsPage;
+
+
+
+
+
+
+
+
+
+
+
+
 'use client';
-import React, { useEffect, useState } from 'react';
-import { client } from '../../../sanity';
+
+import React, { useEffect, useMemo, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
+import { client } from '../../../sanity';
 import '../../styles/tvshows-details.css';
 
 const TvshowsDetailsPage = () => {
   const searchParams = useSearchParams();
-  const slug = searchParams.get('slug');
+  const slug = useMemo(() => searchParams.get('slug'), [searchParams]);
 
   const [tvshow, setTvshow] = useState(null);
 
   useEffect(() => {
+    if (!slug) return;
+
     const fetchTvshow = async () => {
       try {
-        const query = `*[_type == "tvshowsDetails" && slug.current == $slug][0]{
-          title,
-          year,
-          country,
-          revenue,
-          director,
-          studio,
-          genre,
-          "imageUrl": image.asset->url,
-          description
-        }`;
+        const query = `
+          *[_type == "tvshowsDetails" && slug.current == $slug][0]{
+            title,
+            year,
+            country,
+            revenue,
+            director,
+            studio,
+            genre,
+            "imageUrl": image.asset->url,
+            description
+          }
+        `;
         const data = await client.fetch(query, { slug });
         setTvshow(data);
       } catch (error) {
-        console.error('Error fetching tvshow details:', error);
+        console.error('Error fetching TV show details:', error);
       }
     };
 
-    if (slug) {
-      fetchTvshow();
-    }
+    fetchTvshow();
   }, [slug]);
 
+  if (!slug) {
+    return <div className="loading">Invalid slug.</div>;
+  }
+
   if (!tvshow) {
-    return <div className="loading">Loading tvshow details...</div>;
+    return <div className="loading">Loading TV show details...</div>;
   }
 
   return (
