@@ -72,24 +72,20 @@
 
 
 
-
-
-
-
-
 'use client';
 
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { client } from '../../../sanity';
 import '../../styles/tvshows-details.css';
 
 const TvshowsDetailsPage = () => {
   const searchParams = useSearchParams();
-  const slug = useMemo(() => searchParams.get('slug'), [searchParams]);
+  const slug = searchParams.get('slug');
 
   const [tvshow, setTvshow] = useState(null);
 
+  // Fetch TV show details when slug is available
   useEffect(() => {
     if (!slug) return;
 
@@ -150,4 +146,11 @@ const TvshowsDetailsPage = () => {
   );
 };
 
-export default TvshowsDetailsPage;
+// Wrap the component inside Suspense to handle the loading state for client-side fetching.
+const TvshowsDetailsPageWithSuspense = () => (
+  <Suspense fallback={<div className="loading">Loading...</div>}>
+    <TvshowsDetailsPage />
+  </Suspense>
+);
+
+export default TvshowsDetailsPageWithSuspense;
