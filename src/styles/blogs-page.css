@@ -1,29 +1,29 @@
-.container{
+.blogs-container{
 
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     padding: 30px;
     gap: 20px;
 }
-.postcard{
+.blogs-container-postcard{
     border: 1px solid #ddd;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.link{
+.blogs-link{
     text-decoration: none;
     color: inherit;
 }
 
-.image{
+.blogs-image{
     width: 100%;
     height: 200px;
     object-fit: cover;
     margin-bottom: 15px;
 }
-.title{
+.blogs-title{
     font-size: 1.6rem;
     font-weight: bold;
     margin-bottom: 10px;
@@ -31,7 +31,7 @@
 }
 
 
-.description{
+.blogs-description{
     font-size: 1.5rem;
     color: #555;
     margin-bottom: 10px;

@@ -1,14 +1,14 @@
-    .container{
+    .aboutus-container{
       max-width: 800px;
       margin: 50px auto;
       padding: 0 20px;
       text-align: center;
     }
-    .heading {
+    .aboutus-container-heading {
       font-size: 36px;
       margin-bottom: 20px;
     }
-    .text{
+    .aboutus-text{
       font-size: 18px;
       line-height: 1.6;
       margin-bottom: 15px;

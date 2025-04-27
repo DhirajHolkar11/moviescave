@@ -78,12 +78,12 @@ export default function BlogPage() {
 
 
 
-    <div className='container'>
+    <div className='blogs-container'>
 
 
       {posts.map(post => (
 
-        <div key={post.id} className='postcard'>
+        <div key={post.id} className='blogs-container-postcard'>
 
           <a 
           
@@ -93,12 +93,12 @@ export default function BlogPage() {
             : `/blog-standard-post?slug=${post.slug}`
           } 
 
-            className='link'>
+            className='blogs-link'>
 
 
-            {post.image && <img src={post.image} alt={post.title} className='image' />}
-            <div className='title'>{post.title}</div>
-            <p className='description'>
+            {post.image && <img src={post.image} alt={post.title} className='blogs-image' />}
+            <div className='blogs-title'>{post.title}</div>
+            <p className='blogs-description'>
               {post.description?.length > 50 ? post.description.slice(0, 50) + '...' : post.description}
             </p>
 

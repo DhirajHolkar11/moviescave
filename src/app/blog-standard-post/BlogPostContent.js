@@ -48,11 +48,11 @@ export default function BlogPostContent() {
   }
 
   return (
-    <div className="container">
-      <h1 className="title">{post.title}</h1>
-      <p className="intro">{post.introText}</p>
+    <div className="blogstandard-container">
+      <h1 className="blogstandard-title">{post.title}</h1>
+      <p className="blogstandard-intro">{post.introText}</p>
 
-      <div className="content">
+      <div className="blogstandard-content">
         <PortableText value={post.content} components={PortableTextComponents} />
       </div>
     </div>

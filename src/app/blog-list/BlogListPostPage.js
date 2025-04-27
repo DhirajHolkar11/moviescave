@@ -38,7 +38,7 @@ const BlogListPostPage = () => {
     fetchPost();
   }, [slug]);
 
-  if (!post) return <p className='loading'>Loading post...</p>;
+  if (!post) return <p className='bloglist-loading'>Loading post...</p>;
 
   const getRedirectPath = (type) => {
     if (!type) return '/';
@@ -52,11 +52,11 @@ const BlogListPostPage = () => {
   const totalItems = post.items.length;
 
   return (
-    <div className='container'>
-      <h1 className='heading'>{post.title}</h1>
-      <p className='intro'>{post.intro}</p>
+    <div className='bloglist-container'>
+      <h1 className='bloglist-heading'>{post.title}</h1>
+      <p className='bloglist-intro'>{post.intro}</p>
 
-      <div className='main-card'>
+      <div className='bloglist-main-card'>
         {post.items.map((item, index) => {
           const redirectBase = getRedirectPath(item.type);
           const itemSlug = item.slug;
@@ -66,18 +66,18 @@ const BlogListPostPage = () => {
             <Link
               key={index}
               href={`${redirectBase}?slug=${itemSlug}`}
-              className='link'
+              className='bloglist-link'
             >
               {item.imageUrl && (
                 <img
                   src={item.imageUrl}
                   alt={item.title}
-                  className='main-image'
+                  className='bloglist-main-image'
                 />
               )}
-              <div className='info-container'>
-                <h3 className='info-title'>{`${number}. ${item.title}`}</h3>
-                <p className='info-text'>{item.description}</p>
+              <div className='bloglist-info-container'>
+                <h3 className='bloglist-info-title'>{`${number}. ${item.title}`}</h3>
+                <p className='bloglist-info-text'>{item.description}</p>
               </div>
             </Link>
           );

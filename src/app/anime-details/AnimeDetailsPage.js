@@ -37,7 +37,7 @@ const AnimeDetailsPage = () => {
   }, [slug]);
 
   if (!anime) {
-    return <div className="loading">Loading anime details...</div>;
+    return <div className="anime-detaills-loading">Loading anime details...</div>;
   }
 
   return (
@@ -45,11 +45,11 @@ const AnimeDetailsPage = () => {
 
       <div className="anime-details-row">
 
-        <div className="anime-image">
+        <div className="anime-details-image">
           <img src={anime.imageUrl} alt={anime.title} />
         </div>
 
-        <div className="anime-info">
+        <div className="anime-details-info">
           <h1>{anime.title}</h1>
           <p><strong>Year:</strong> {anime.year}</p>
           <p><strong>Studio:</strong> {anime.studio}</p>
@@ -61,7 +61,7 @@ const AnimeDetailsPage = () => {
 
       </div>
 
-      <div className="anime-description">
+      <div className="anime-details-description">
         <h2>Description</h2>
         <p>{anime.description}</p>
       </div>

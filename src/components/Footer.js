@@ -7,10 +7,10 @@ import '../styles/footer.css'
 const Footer = () => {
   return (
     <footer className='footer'>
-      <p className='text'>
+      <p className='footer-text'>
         © {new Date().getFullYear()} moviescave.com | All rights reserved. |{' '}
         <Link href="/about">
-          <span className='link'>About Us</span>
+          <span className='footer-link'>About Us</span>
         </Link>
       </p>
     </footer>

@@ -62,10 +62,10 @@ const TvshowsPage = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <div className="container">
+    <div className="tvshows-container">
 
       {/* Filters */}
-      <div className="filters">
+      <div className="tvshows-filters">
 
 
       <div>
@@ -99,9 +99,9 @@ const TvshowsPage = () => {
 
 
       {/* Grid */}
-      <div className="grid">
+      <div className="tvshows-grid">
         {currentTvshow.map((tvshow) => (
-          <div key={tvshow._id} className="card">
+          <div key={tvshow._id} className="tvshows-card">
 
             
 
@@ -116,7 +116,7 @@ const TvshowsPage = () => {
       </div>
 
       {/* Pagination */}
-      <div className="pagination">
+      <div className="tvshows-pagination">
         {Array.from({ length: Math.ceil(filteredTvshow.length / tvshowPerPage) }, (_, index) => (
           <button key={index + 1} onClick={() => paginate(index + 1)} className={currentPage === index + 1 ? 'active' : ''}>
             {index + 1}

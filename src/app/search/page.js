@@ -235,13 +235,13 @@ function SearchContent() {
   };
 
   return (
-    <div className="search-page-container">
+    <div className="search-container">
       {/* Category Filters */}
       <div className="search-filters">
         {['blogs', 'movies', 'tvshows', 'anime'].map((category) => (
           <button
             key={category}
-            className={`filter-button ${selectedCategory === category ? 'active' : ''}`}
+            className={`search-filter-button ${selectedCategory === category ? 'active' : ''}`}
             onClick={() => setSelectedCategory(category)}
           >
             {category.charAt(0).toUpperCase() + category.slice(1)}
@@ -250,7 +250,7 @@ function SearchContent() {
       </div>
 
       {/* Search Results */}
-      <div className="results-container">
+      <div className="search-results-container">
         {loading ? (
           <p className="loading">Loading...</p>
         ) : results.length > 0 ? (
@@ -258,15 +258,15 @@ function SearchContent() {
             <Link
               key={`${item._type || selectedCategory}-${item.slug}`}
               href={getDetailsLink(selectedCategory, item)}
-              className="result-item"
+              className="search-result-item"
             >
-              <div className="result-image-container">
+              <div className="search-result-image-container">
                 <img src={item.image} alt={item.title} className="square-image" />
               </div>
-              <div className="result-content">
-                <h3 className="result-title">{item.title}</h3>
+              <div className="search-result-content">
+                <h3 className="search-result-title">{item.title}</h3>
                 {item.description && (
-                  <p className="result-description">
+                  <p className="search-result-description">
                     {item.description.length > 150
                       ? item.description.slice(0, 150) + '...'
                       : item.description}
@@ -276,7 +276,7 @@ function SearchContent() {
             </Link>
           ))
         ) : (
-          <p className="no-results">No results found.</p>
+          <p className="search-no-results">No results found.</p>
         )}
       </div>
     </div>
@@ -285,7 +285,7 @@ function SearchContent() {
 
 export default function SearchPage() {
   return (
-    <Suspense fallback={<div className="loading">Loading...</div>}>
+    <Suspense fallback={<div className="search-loading">Loading...</div>}>
       <SearchContent />
     </Suspense>
   );

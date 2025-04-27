@@ -121,19 +121,19 @@ function MoviesDetailsContent() {
   }, [slug]);
 
   if (!movie) {
-    return <div className="loading">Loading movie details...</div>;
+    return <div className="movies-details-loading">Loading movie details...</div>;
   }
 
   return (
-    <div className="movie-details-container">
+    <div className="movies-details-container">
 
-      <div className="movie-details-row">
+      <div className="movies-details-row">
 
-        <div className="movie-image">
+        <div className="movies-details-image">
           <img src={movie.imageUrl} alt={movie.title} />
         </div>
 
-        <div className="movie-info">
+        <div className="movies-details-info">
           <h1>{movie.title}</h1>
           <p><strong>Year:</strong> {movie.year}</p>
           <p><strong>Studio:</strong> {movie.studio}</p>
@@ -145,7 +145,7 @@ function MoviesDetailsContent() {
         
       </div>
 
-      <div className="movie-description">
+      <div className="movies-details-description">
         <h2>Description</h2>
         <p>{movie.description}</p>
       </div>
@@ -156,7 +156,7 @@ function MoviesDetailsContent() {
 
 export default function MoviesDetailsPage() {
   return (
-    <Suspense fallback={<div className="loading">Loading movie details...</div>}>
+    <Suspense fallback={<div className="movies-details-loading">Loading movie details...</div>}>
       <MoviesDetailsContent />
     </Suspense>
   );

@@ -65,11 +65,11 @@ const MoviePage = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <div className="container">
+    <div className="movies-container">
 
 
       {/* Filters */}
-      <div className="filters">
+      <div className="movies-filters">
 
         <div>
         <div>Genre</div>
@@ -100,9 +100,9 @@ const MoviePage = () => {
       </div>
 
       {/* Grid */}
-      <div className="grid">
+      <div className="movies-grid">
         {currentMovie.map((movie) => (
-          <div key={movie._id} className="card">
+          <div key={movie._id} className="movies-card">
 
             
 
@@ -117,7 +117,7 @@ const MoviePage = () => {
       </div>
 
       {/* Pagination */}
-      <div className="pagination">
+      <div className="movies-pagination">
         {Array.from({ length: Math.ceil(filteredMovie.length / moviePerPage) }, (_, index) => (
           <button key={index + 1} onClick={() => paginate(index + 1)} className={currentPage === index + 1 ? 'active' : ''}>
             {index + 1}

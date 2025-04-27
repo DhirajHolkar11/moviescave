@@ -115,20 +115,20 @@ const TvshowsDetailsPage = () => {
   }, [slug]);
 
   if (!slug) {
-    return <div className="loading">Invalid slug.</div>;
+    return <div className="tvshows-details-loading">Invalid slug.</div>;
   }
 
   if (!tvshow) {
-    return <div className="loading">Loading TV show details...</div>;
+    return <div className="tvshows-details-loading">Loading TV show details...</div>;
   }
 
   return (
-    <div className="tvshow-details-container">
-      <div className="tvshow-details-row">
-        <div className="tvshow-image">
+    <div className="tvshows-details-container">
+      <div className="tvshows-details-row">
+        <div className="tvshows-details-image">
           <img src={tvshow.imageUrl} alt={tvshow.title} />
         </div>
-        <div className="tvshow-info">
+        <div className="tvshows-details-info">
           <h1>{tvshow.title}</h1>
           <p><strong>Year:</strong> {tvshow.year}</p>
           <p><strong>Studio:</strong> {tvshow.studio}</p>
@@ -138,7 +138,7 @@ const TvshowsDetailsPage = () => {
           <p><strong>Genre:</strong> {tvshow.genre?.join(', ')}</p>
         </div>
       </div>
-      <div className="tvshow-description">
+      <div className="tvshows-details-description">
         <h2>Description</h2>
         <p>{tvshow.description}</p>
       </div>
@@ -148,7 +148,7 @@ const TvshowsDetailsPage = () => {
 
 // Wrap the component inside Suspense to handle the loading state for client-side fetching.
 const TvshowsDetailsPageWithSuspense = () => (
-  <Suspense fallback={<div className="loading">Loading...</div>}>
+  <Suspense fallback={<div className="tvshows-details-loading">Loading...</div>}>
     <TvshowsDetailsPage />
   </Suspense>
 );

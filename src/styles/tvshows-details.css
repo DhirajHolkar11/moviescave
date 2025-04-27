@@ -1,4 +1,4 @@
-.tvshow-details-container {
+.tvshows-details-container {
   max-width: 900px;
   margin: 40px auto;
   padding: 20px;
@@ -7,18 +7,18 @@
   border: 1px solid black;
 }
 
-.tvshow-details-row {
+.tvshows-details-row {
   display: flex;
   gap: 20px;
   margin-bottom: 30px;
   border: 1px solid black;
   justify-content: center;
 }
-.tvshow-image {
+.tvshows-details-image {
   flex: 0 0 30%;
 }
 
-.tvshow-image img {
+.tvshows-details-image img {
   width: 250px;
   height: 350px;
   object-fit: cover;
@@ -26,37 +26,37 @@
 
 }
 
-.tvshow-info {
+.tvshows-details-info {
   flex: 0 0 70%;
   padding: 10px;
 }
 
-.tvshow-info h1 {
+.tvshows-details-info h1 {
   margin-bottom: 15px;
   font-size: 28px;
 }
 
-.tvshow-info p {
+.tvshows-details-info p {
   margin: 8px 0;
   font-size: 16px;
 }
 
-.tvshow-description {
+.tvshows-details-description {
   margin-top: 30px;
 }
 
-.tvshow-description h2 {
+.tvshows-details-description h2 {
   margin-bottom: 10px;
   font-size: 22px;
 }
 
-.tvshow-description p {
+.tvshows-details-description p {
   line-height: 1.6;
   font-size: 16px;
   color: #555;
 }
 
-.loading {
+.tvshows-details-loading {
   text-align: center;
   margin-top: 100px;
   font-size: 18px;
@@ -69,12 +69,12 @@
 
 @media (max-width:1000px){
   
-  .tvshow-image{
+  .tvshows-details-image{
     flex: 0 0 50%;
     display: flex;
     justify-content: right;
   }
-  .tvshow-info{
+  .tvshows-details-info{
     flex: 0 0 50%;
   }
 }
@@ -84,11 +84,11 @@
 
 
 @media (max-width:600px){
-  .tvshow-details-row{
+  .tvshows-details-row{
     flex-direction: column;
   }
 
-  .tvshow-image img {
+  .tvshows-detials-image img {
     width: 100%;
     height: 350px;
     object-fit: cover;

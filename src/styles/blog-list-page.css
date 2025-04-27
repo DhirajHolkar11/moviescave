@@ -1,26 +1,26 @@
-.loading{
+.bloglist-loading{
     text-align: center;
      margin-top: 50px;
 }
-.container{
+.bloglist-container{
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
 }
-.heading{
+.bloglist-heading{
     text-align: center;
     margin-bottom: 10px;
 }
-.intro{
+.bloglist-intro{
     text-align: center;
     margin-bottom: 40px;
 }
-.main-card{
+.bloglist-main-card{
     display: flex;
      flex-direction: column;
       gap: 30px;
 }
-.link{
+.bloglist-link{
     display: flex;
     text-decoration: none;
     color: inherit;
@@ -29,18 +29,18 @@
     transition: transform 0.2s;
     cursor: pointer;
 }
-.main-image{
+.bloglist-main-image{
     width: 200px;
     height: 250px;
     object-fit: cover;
 }
-.info-container{
+.bloglist-info-container{
     padding: 20px;
 }
-.info-title{
+.bloglist-info-title{
     margin: 10px;
 }
-.info-text{
+.bloglist-info-text{
     margin: 10px;
     color: #555;
 }
@@ -48,10 +48,10 @@
 
 
 @media (max-width:600px){
-    .link{
+    .bloglist-link{
         flex-direction:column;
     }
-    .main-image{
+    .bloglist-main-image{
         width: 100%;
         height: 250px;
         object-fit: cover;

@@ -1,4 +1,4 @@
-.container {
+.movies-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
@@ -7,7 +7,7 @@
   }
   
   
-  .filters {
+  .movies-filters {
     display: flex;
     justify-content: center;
     gap: 15px;
@@ -16,24 +16,24 @@
   }
 
 
-  .filters::-webkit-scrollbar {
+  .movies-filters::-webkit-scrollbar {
     display: none;
   }
   
-  .filters select {
+  .movies-filters select {
     padding: 8px 12px;
     font-size: 16px;
     width: 200px;
   }
   
-  .grid {
+  .movies-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 25px;
     margin-top:50px;
   }
   
-  .card {
+  .movies-card {
     border: 1px solid #ddd;
     overflow: hidden;
     text-align: center;
@@ -41,24 +41,24 @@
   }
   
   
-  .card img {
+  .movies-card img {
     width: 100%;
     height: 300px;
     object-fit: cover;
     object-position: top;
   }
   
-  .card a {
+  .movies-card a {
     text-decoration:none;
   }
   
-  .card div {
+  .movies-card div {
     margin: 10px 0;
     font-size: 16px;
     color: #333;
   }
 
-  .card p {
+  .movies-card p {
     margin: 5px 0;
     color: #666;
   }
@@ -69,7 +69,7 @@
     margin-top: 20px;
   }
   
-  .pagination button {
+  .movies-pagination button {
     background-color: #f0f0f0;
     border: none;
     margin: 0 5px;
@@ -78,12 +78,12 @@
     border-radius: 4px;
   }
   
-  .pagination button.active {
+  .movies-pagination button.active {
     background-color: #333;
     color: white;
   }
   
-  .pagination button:hover {
+  .movies-pagination button:hover {
     background-color: #555;
     color: white;
   }
@@ -95,7 +95,7 @@
 
 
   @media (max-width:800px){
-    .filters{
+    .movies-filters{
       justify-content: unset;
     }
   }

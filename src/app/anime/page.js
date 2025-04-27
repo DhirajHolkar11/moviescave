@@ -62,10 +62,10 @@ const AnimePage = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <div className="container">
+    <div className="anime-container">
 
       {/* Filters */}
-      <div className="filters">
+      <div className="anime-filters">
 
         <div>
         <div>Genre</div>
@@ -96,9 +96,9 @@ const AnimePage = () => {
         </div>
 
       {/* Grid */}
-      <div className="grid">
+      <div className="anime-grid">
         {currentAnime.map((anime) => (
-          <div key={anime._id} className="card">
+          <div key={anime._id} className="anime-card">
 
             
 
@@ -112,7 +112,7 @@ const AnimePage = () => {
       </div>
 
       {/* Pagination */}
-      <div className="pagination">
+      <div className="anime-pagination">
         {Array.from({ length: Math.ceil(filteredAnime.length / animePerPage) }, (_, index) => (
           <button key={index + 1} onClick={() => paginate(index + 1)} className={currentPage === index + 1 ? 'active' : ''}>
             {index + 1}
