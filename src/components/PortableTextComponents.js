@@ -10,11 +10,11 @@ export const PortableTextComponents = {
       }
 
       return (
-        <div className="image-container">
+        <div className="blogsection-image-container">
           <img
             src={value.asset.url}
             alt={value.alt || 'Post Image'}
-            className="image"
+            className="blogsection-image"
           />
         </div>
       );
@@ -23,7 +23,7 @@ export const PortableTextComponents = {
     videoBlock: ({ value }) => {
       if (!value?.videoUrl) return null; // corrected field name
       return (
-        <div className="video-container">
+        <div className="blogsection-video-container">
           <iframe
             width="100%"
             height="400"
@@ -39,9 +39,9 @@ export const PortableTextComponents = {
     listBlock: ({ value }) => {
       if (!value?.items?.length) return null;
       return (
-        <ul className="list-container">
+        <ul className="blogsection-list-container">
           {value.items.map((item, idx) => (
-            <li key={idx} className="list">
+            <li key={idx} className="blogsection-list">
               {item}
             </li>
           ))}
@@ -52,7 +52,7 @@ export const PortableTextComponents = {
 
   block: {
     normal: ({ children }) => (
-      <p className="block-container">
+      <p className="blogsection-block-container">
         {children}
       </p>
     ),

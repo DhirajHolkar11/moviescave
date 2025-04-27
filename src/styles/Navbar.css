@@ -10,11 +10,11 @@
   flex: 1;
   text-align: center;
 }
-.navbar__logo .large-logo {
+.navbar__logo .navbar-large-logo {
   width: 200px;
   height: auto;
 }
-.navbar__logo .small-logo {
+.navbar__logo .navbar-small-logo {
   display: none;
 }
 .navbar__links a {
@@ -137,10 +137,10 @@
   .navbar-item{
     flex: unset;
   }
-  .navbar__logo .large-logo {
+  .navbar__logo .navbar-large-logo {
     display: none;
   }
-  .navbar__logo .small-logo {
+  .navbar__logo .navbar-small-logo {
     width: 4.2rem;
     height: auto;
     display: inline;
