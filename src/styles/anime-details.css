@@ -4,14 +4,12 @@
     padding: 20px;
     font-family: Arial, sans-serif;
     color: #333;
-    border: 1px solid black;
   }
   
   .anime-details-row {
     display: flex;
     gap: 20px;
     margin-bottom: 30px;
-    border: 1px solid black;
     justify-content: center;
   }
   .anime-details-image {
