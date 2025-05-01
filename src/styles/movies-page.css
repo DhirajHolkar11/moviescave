@@ -18,11 +18,17 @@
   .movies-filters::-webkit-scrollbar {
     display: none;
   }
-  
+  .movies-filters-type{
+    font-size: 2rem;
+  }
+
   .movies-filters select {
     padding: 8px 12px;
     font-size: 16px;
     width: 200px;
+    outline: none;
+ 
+
   }
   
   .movies-grid {
@@ -62,7 +68,7 @@
     color: #666;
   }
   
-  .pagination {
+  .movies-pagination {
     display: flex;
     justify-content: center;
     margin-top: 20px;
@@ -74,16 +80,15 @@
     margin: 0 5px;
     padding: 8px 12px;
     cursor: pointer;
-    border-radius: 4px;
   }
   
   .movies-pagination button.active {
-    background-color: #333;
+    background-color:rgb(100, 100, 255);
     color: white;
   }
   
   .movies-pagination button:hover {
-    background-color: #555;
+    background-color: rgb(150,150,255);
     color: white;
   }
   
@@ -98,3 +103,30 @@
       justify-content: unset;
     }
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

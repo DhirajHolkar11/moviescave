@@ -18,6 +18,9 @@
 .tvshows-filters::-webkit-scrollbar {
   display: none;
 }
+.tvshows-filters-type{
+  font-size: 2rem;
+}
 
 .tvshows-filters select {
   padding: 8px 12px;
@@ -74,16 +77,15 @@
   margin: 0 5px;
   padding: 8px 12px;
   cursor: pointer;
-  border-radius: 4px;
 }
 
 .tvshows-pagination button.active {
-  background-color: #333;
+  background-color:  rgb(100,100,255);
   color: white;
 }
 
 .tvshows-pagination button:hover {
-  background-color: #555;
+  background-color: rgb(150,150,255);
   color: white;
 }
 

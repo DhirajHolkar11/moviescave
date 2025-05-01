@@ -68,7 +68,7 @@ const AnimePage = () => {
       <div className="anime-filters">
 
         <div>
-        <div>Genre</div>
+        <div className='anime-filters-type'>Genre</div>
         <select value={selectedGenre} onChange={(e) => setSelectedGenre(e.target.value)}>
           {genres.map((genre) => (
             <option key={genre} value={genre}>{genre}</option>
@@ -77,7 +77,7 @@ const AnimePage = () => {
         </div>
 
         <div>
-        <div>Country</div>
+        <div className='anime-filters-type'>Country</div>
         <select value={selectedCountry} onChange={(e) => setSelectedCountry(e.target.value)}>
           {countries.map((country) => (
             <option key={country} value={country}>{country}</option>
@@ -86,7 +86,7 @@ const AnimePage = () => {
         </div>
 
         <div>
-        <div>Year</div>
+        <div className='anime-filters-type'>Year</div>
         <select value={selectedYear} onChange={(e) => setSelectedYear(e.target.value)}>
           {years.map((year) => (
             <option key={year} value={year}>{year}</option>

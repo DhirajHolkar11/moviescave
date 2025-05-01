@@ -50,11 +50,24 @@ export const PortableTextComponents = {
     },
   },
 
+  // block: {
+  //   normal: ({ children }) => (
+  //     <p className="blogsection-block-container">
+  //       {children}
+  //     </p>
+  //   ),
+  // },
+
+
+
   block: {
-    normal: ({ children }) => (
-      <p className="blogsection-block-container">
-        {children}
-      </p>
-    ),
-  },
+    normal: ({ children }) => <p className="blogsection-block-container">{children}</p>,
+    h1: ({ children }) => <h1 className="blogsection-heading-h1">{children}</h1>,
+    h2: ({ children }) => <h2 className="blogsection-heading-h2">{children}</h2>,
+    h3: ({ children }) => <h3 className="blogsection-heading-h3">{children}</h3>,
+    h4: ({ children }) => <h4 className="blogsection-heading-h4">{children}</h4>,
+    h5: ({ children }) => <h5 className="blogsection-heading-h5">{children}</h5>,
+    h6: ({ children }) => <h6 className="blogsection-heading-h6">{children}</h6>
+  }
+  
 };

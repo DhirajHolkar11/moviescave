@@ -67,11 +67,11 @@ export default function BlogPage() {
   }, []);
 
   if (loading) {
-    return <div>Loading posts...</div>;
+    return <div className='blogs-page-loading'>Loading Posts...</div>;
   }
 
   if (!posts.length) {
-    return <div>No posts found.</div>;
+    return <div className='blogs-page-loading'>No Posts Found.</div>;
   }
 
   return (
@@ -99,7 +99,7 @@ export default function BlogPage() {
             {post.image && <img src={post.image} alt={post.title} className='blogs-image' />}
             <div className='blogs-title'>{post.title}</div>
             <p className='blogs-description'>
-              {post.description?.length > 50 ? post.description.slice(0, 50) + '...' : post.description}
+              {post.description?.length > 100 ? post.description.slice(0, 100) + '...' : post.description}
             </p>
 
 

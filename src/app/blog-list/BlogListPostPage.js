@@ -53,7 +53,7 @@ const BlogListPostPage = () => {
 
   return (
     <div className='bloglist-container'>
-      <h1 className='bloglist-heading'>{post.title}</h1>
+      <div className='bloglist-heading'>{post.title}</div>
       <p className='bloglist-intro'>{post.intro}</p>
 
       <div className='bloglist-main-card'>

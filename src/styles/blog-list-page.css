@@ -1,24 +1,25 @@
 .bloglist-loading{
     text-align: center;
-     margin-top: 50px;
-}
+    margin-top: 50px;
+ }
 .bloglist-container{
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
 }
 .bloglist-heading{
-    text-align: center;
-    margin-bottom: 10px;
+    margin: 2rem 0;
+    font-size: 3rem;
+    font-weight: 600;
 }
 .bloglist-intro{
-    text-align: center;
     margin-bottom: 40px;
+    font-size: 1.6rem;
 }
 .bloglist-main-card{
     display: flex;
-     flex-direction: column;
-      gap: 30px;
+    flex-direction: column;
+    gap: 5rem;
 }
 .bloglist-link{
     display: flex;
@@ -39,10 +40,11 @@
 }
 .bloglist-info-title{
     margin: 10px;
+    font-size: 2rem;
 }
 .bloglist-info-text{
     margin: 10px;
-    color: #555;
+    font-size: 1.6rem;
 }
 
 

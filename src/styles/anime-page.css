@@ -18,6 +18,9 @@
     display: none;
   }
   
+  .anime-filters-type{
+    font-size: 2rem;
+  }
   
   .anime-filters select {
     padding: 8px 12px;
@@ -74,16 +77,15 @@
     margin: 0 5px;
     padding: 8px 12px;
     cursor: pointer;
-    border-radius: 4px;
   }
   
   .anime-pagination button.active {
-    background-color: #333;
+    background-color: rgb(100,100,255);
     color: white;
   }
   
   .anime-pagination button:hover {
-    background-color: #555;
+    background-color: rgb(150,150,255);
     color: white;
   }
   
